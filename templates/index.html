@@ -1,0 +1,42 @@
+<!-- Code by TaufikBudiBlog
+Author: Taufik Budi Setiawan
+Author URL: https://taufikbudiblog.wordpress.com
+License: Creative Commons Atribusi-NonKomersial 4.0 Internasional
+License URL: http://creativecommons.org/licenses/by-nc/4.0/
+-->
+<html>
+<head>
+   <title>Aplikasi CRUD python Menggunakan Flask | taufikbudiblog.wordpress.com </title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+</head>
+<body>
+   <div class="container">
+   <h2>Aplikasi CRUD python Menggunakan Flask</h2>
+   <table class="table table-bordered table-hover">
+      <thead>
+      <tr>
+          <th>ID Barang</th>
+          <th>Nama Barang</th>
+          <th>Harga</th>
+          <th>Stok</th>
+          <th width="10%" colspan="2">Aksi</th>
+      </tr>
+      </thead>
+   
+          <tbody>
+            {% for row in container %}
+            <tr>
+               <td>{{ row[0] }}</td>
+               <td>{{ row[1] }}</td>
+               <td>{{ row[2] }}</td>
+               <td>{{ row[3] }}</td>
+               <td><a href="http://localhost:5000/edit/{{row[0]}}" class="btn btn-warning" role="button">Ubah</a></td>
+               <td><a href="http://localhost:5000/hapus/{{row[0]}}" class="btn btn-danger" role="button">Hapus</a></td>
+            </tr>
+         {% endfor %}
+          </tbody>
+   </table>
+   <a href="http://localhost:5000/tambah" class="btn btn-primary" role="button">Tambah Data</a>
+   </div>
+</body>
+</html>

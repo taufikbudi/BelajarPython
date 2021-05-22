@@ -1,0 +1,34 @@
+<!-- Code by TaufikBudiBlog
+Author: Taufik Budi Setiawan
+Author URL: https://taufikbudiblog.wordpress.com
+License: Creative Commons Atribusi-NonKomersial 4.0 Internasional
+License URL: http://creativecommons.org/licenses/by-nc/4.0/
+-->
+<html>
+<head>
+   <title>Aplikasi CRUD python Menggunakan Flask | taufikbudiblog.wordpress.com </title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+</head>
+<body>
+   <div class="container">
+      <div class="col-sm-5">
+      <h2>Tambah Data Barang</h2>
+         <form action="{{ url_for('tambah') }}" method="post">
+            <div class="form-group">
+               <label>Nama Barang:</label>
+               <input type="text" name="nama" class="form-control" placeholder="Masukan nama barang" required />
+            </div>
+            <div class="form-group">
+               <label>Harga:</label>
+               <input type="number" name="harga" class="form-control" placeholder="Masukan harga" required />
+            </div>
+            <div class="form-group">
+               <label>Stok:</label>
+               <input type="number" name="stok" class="form-control" placeholder="Masukan stok" required />
+            </div>
+            <button type="submit" id="Submit" name="submit" class="btn btn-primary">Tambah Barang</button>
+      </form>
+   </div>
+</div>
+</body>
+</html>
